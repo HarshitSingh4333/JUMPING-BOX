@@ -38,11 +38,8 @@ function setup(){
 
 function draw() {
     background(rgb(169,169,169));
-    createEdgeSprites()
-    BouncingBox.bounceOff(edges[4])
-    BouncingBox.bounceOff(edges[3])
-    BouncingBox.bounceOff(edges[2])
-    BouncingBox.bounceOff(edges[1])
+   edges = createEdgeSprites()
+    BouncingBox.bounceOff(edges)
     drawSprites()
 
     if(redBox.isTouching(BouncingBox) && BouncingBox.bounceOff(redBox)) {
